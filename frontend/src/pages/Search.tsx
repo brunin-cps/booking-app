@@ -1,8 +1,6 @@
-import { useForm } from "react-hook-form";
-import { useMutation, useQuery, useQueryClient } from "react-query";
+
+import { useQuery } from "react-query";
 import * as apiClient from '../api-client'
-import { useAppContext } from "../contexts/AppContext";
-import { Link, useNavigate } from "react-router-dom";
 import { useSearchContext } from "../contexts/SearchContext";
 import { useState } from "react";
 import SearchResultsCard from "../components/SearchResultsCard";
