@@ -4,6 +4,7 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import userRoutes from './routes/users'
 import authRoutes from './routes/auth'
+import hotelRoutes from './routes/hotel'
 import cookieParser from 'cookie-parser'
 import path from 'path'
 import myHotelRoutes from './routes/my-hotels'
@@ -16,7 +17,6 @@ cloudinary.config({
 });
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
-
 
 const app = express()
 app.use(express.json())
@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, "../../frontend/dist")))
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/my-hotels", myHotelRoutes);
+app.use("/api/hotels", hotelRoutes)
 // app.get("*", (req: Request, res: Response) => {
 //   res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'))
 // })

@@ -6,6 +6,7 @@ import AddHotel from './pages/AddHotel'
 import { useAppContext } from './contexts/AppContext'
 import MyHotels from './pages/MyHotels'
 import EditHotel from './pages/EditHotel'
+import Search from './pages/Search'
 
 function App() {
 
@@ -13,12 +14,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout>
-          <p>HomePage</p>
-        </Layout>} />
-        <Route path="/search" element={<Layout>
-          <p>SearchPage</p>
-        </Layout>} />
+        <Route path="/" element={<Layout><p>HomePage</p></Layout>} />
+        <Route path="/search" element={<Layout><Search /></Layout>} />
         <Route path="/register" element={<Layout><Register></Register></Layout>} />
         <Route path="/sign-in" element={<Layout><Login></Login></Layout>} />
 
