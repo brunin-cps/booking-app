@@ -22,7 +22,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
             </span>
             <span className="ml-1 text-sm">{hotel.type}</span>
           </div>
-          <Link className="text-2xl font-bold cursor-pointer" to={`/detail/${hotel._id}`}>{hotel.name}</Link>
+          <Link id={hotel.name} className="text-2xl font-bold cursor-pointer" to={`/detail/${hotel._id}`}>{hotel.name}</Link>
         </div>
         <div>
           <div className="line-cramp-4">{hotel.description}</div>
